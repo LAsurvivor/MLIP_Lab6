@@ -12,11 +12,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh '''#!/bin/bash
+                sh '''#!/bin/zsh
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                ~/anaconda3/bin/conda create -n mlip python pytest numpy pandas scikit-learn -c conda-forge
                 ~/anaconda3/bin/conda init
 
                 # TODO Complete the command to run pytest
